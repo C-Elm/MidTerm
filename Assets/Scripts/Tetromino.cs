@@ -19,7 +19,7 @@ public struct TetrominoData
     public Tile tile;
     public Vector2Int[] cells { get; private set; }
 
-    public void Initialize ()
+    public void Initialize()
     {
         this.cells = Data.Cells[this.tetromino];
     }
