@@ -152,20 +152,7 @@ public class Board : MonoBehaviour
             tilemap.SetTile(position, null);
         }
 
-        // Shift every row above down one
-        while (row < bounds.yMax)
-        {
-            for (int col = bounds.xMin; col < bounds.xMax; col++)
-            {
-                Vector3Int position = new Vector3Int(col, row + 1, 0);
-                TileBase above = tilemap.GetTile(position);
-
-                position = new Vector3Int(col, row, 0);
-                tilemap.SetTile(position, above);
-            }
-
-            row++;
-        }
+       
     }
 
 }
